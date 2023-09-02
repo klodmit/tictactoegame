@@ -3,4 +3,12 @@
     <string name="title_new_game">Новая игра</string>
     <string name="title_settings">Настройки</string>
     <string name="title_continue_game">Продолжить игру</string>
+    <string name="vertical">Ряд по вертикали</string>
+    <string name="horizontal">Ряд по горизонтали</string>
+    <string name="diagonal">Ряд по диагонали</string>
+    <string name="difficult">Легко</string>
+    <string name="rules">Правила игры</string>
+    <string name="namedif">Сложность</string>
+    <string name="sound">Звук</string>
+    <string name="settings">Настройки</string>
 </resources>
