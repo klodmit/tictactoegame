@@ -15,7 +15,7 @@
         android:layout_marginTop="76dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="64dp"
-        android:src="@tools:sample/avatars"
+        android:src="@drawable/logo_main"
         app:layout_constraintBottom_toTopOf="@+id/toNewGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

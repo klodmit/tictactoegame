@@ -8,4 +8,6 @@
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="1">@color/brown</item>
     </style>
+
+    <style name="Theme.Tictactoegame" parent="Base.Theme.Tictactoegame" />
 </resources>
