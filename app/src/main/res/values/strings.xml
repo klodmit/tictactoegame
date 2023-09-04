@@ -15,4 +15,6 @@
     <string name="popup_continue">Продолжить игру</string>
     <string name="popup_settings">Настройки</string>
     <string name="popup_menu">Меню</string>
+
+    <string name="preference_file_key">my.tic_tak_toe.file_key</string>
 </resources>
