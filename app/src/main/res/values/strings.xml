@@ -11,4 +11,8 @@
     <string name="namedif">Сложность</string>
     <string name="sound">Звук</string>
     <string name="settings">Настройки</string>
+    <string name="popup_save">Сохранить и выйти</string>
+    <string name="popup_continue">Продолжить игру</string>
+    <string name="popup_settings">Настройки</string>
+    <string name="popup_menu">Меню</string>
 </resources>
