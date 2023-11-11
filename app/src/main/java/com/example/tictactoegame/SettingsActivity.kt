@@ -1,8 +1,10 @@
 package com.example.tictactoegame
 
 import android.os.Bundle
+import android.view.View
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isInvisible
 import com.example.tictactoegame.databinding.ActivitySettingsBinding
 import java.lang.reflect.Array.getInt
 
@@ -15,6 +17,7 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivitySettingsBinding.inflate(layoutInflater)
 
         val data = getSettingsInfo()
 
@@ -22,15 +25,59 @@ class SettingsActivity : AppCompatActivity() {
         currentLevel = data.lvl
         currentRules = data.rules
 
-        binding = ActivitySettingsBinding.inflate(layoutInflater)
+        when(currentRules) {
+            1 -> binding.verticalRules.isChecked = true
+            2 -> binding.horizontalRules.isChecked = true
+            3 -> {
+                binding.verticalRules.isChecked = true
+                binding.horizontalRules.isChecked = true
+            }
+            4 -> binding.diagonalRules.isChecked = true
+            5 -> {
+                binding.diagonalRules.isChecked = true
+                binding.verticalRules.isChecked = true
+            }
+            6-> {
+                binding.diagonalRules.isChecked = true
+                binding.horizontalRules.isChecked = true
+            }
+            7 -> {
+                binding.diagonalRules.isChecked = true
+                binding.horizontalRules.isChecked = true
+                binding.verticalRules.isChecked = true
+            }
+        }
+
+        if(currentLevel == 0){
+            binding.prevlvl.visibility = View.INVISIBLE
+        } else if(currentLevel==2){
+            binding.nextlvl.visibility = View.INVISIBLE
+        }
+
+        binding.infoLevel.text = resources.getStringArray(R.array.game_level)[currentLevel]
+        binding.soundbar.progress = currentSound
 
         binding.prevlvl.setOnClickListener {
             currentLevel--
+
+            if(currentLevel == 0){
+                binding.prevlvl.visibility = View.INVISIBLE
+            } else if(currentLevel==1){
+                binding.nextlvl.visibility = View.VISIBLE
+            }
+            binding.infoLevel.text = resources.getStringArray(R.array.game_level)[currentLevel]
             updatelvl(currentLevel)
         }
 
         binding.nextlvl.setOnClickListener {
             currentLevel++
+
+            if(currentLevel == 1){
+                binding.prevlvl.visibility = View.VISIBLE
+            } else if(currentLevel==2){
+                binding.nextlvl.visibility = View.INVISIBLE
+            }
+            binding.infoLevel.text = resources.getStringArray(R.array.game_level)[currentLevel]
             updatelvl(currentLevel)
         }
 

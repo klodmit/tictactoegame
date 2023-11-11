@@ -101,7 +101,7 @@
             app:layout_constraintTop_toBottomOf="@+id/prevlvl" />
 
         <TextView
-            android:id="@+id/gamedif"
+            android:id="@+id/infoLevel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"
