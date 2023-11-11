@@ -125,35 +125,41 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun updateSoundValue(value: Int) {
         with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE).edit()) {
-            putInt("sound_value", value)
+            putInt(PREF_SOUND, value)
             apply()
         }
     }
 
     private fun updatelvl(lvl: Int) {
         with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE).edit()) {
-            putInt("lvl", lvl)
+            putInt(PREF_LEVEL, lvl)
             apply()
         }
     }
 
     private fun updateRules(rules: Int) {
         with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE).edit()) {
-            putInt("rules", rules)
+            putInt(PREF_RULES, rules)
             apply()
         }
     }
 
     private fun getSettingsInfo(): SettingsInfo {
         with(getSharedPreferences(getString(R.string.preference_file_key), MODE_PRIVATE).edit()) {
-            val soundValue = getInt("sound_value", 0)
-            val lvl = getInt("lvl", 0)
-            val rules = getInt("rules", 0)
+            val soundValue = getInt(PREF_SOUND, 0)
+            val lvl = getInt(PREF_LEVEL, 0)
+            val rules = getInt(PREF_RULES, 0)
 
             return SettingsInfo(soundValue, lvl, rules)
         }
     }
 
     data class SettingsInfo(val soundValue: Int, val lvl: Int, val rules: Int)
+    companion object {
 
+        const val PREF_SOUND = "my.tick_tac_toe.SOUND"
+        const val PREF_LEVEL = "my.tick_tac_toe.LEVEL"
+        const val PREF_RULES = "my.tick_tac_toe.RULES"
+
+    }
 }
