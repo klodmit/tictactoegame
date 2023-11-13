@@ -1,13 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Tictactoegame" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/yellow</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/brown</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor" tools:targetApi="1">@color/brown</item>
-    </style>
 
-    <style name="Theme.Tictactoegame" parent="Base.Theme.Tictactoegame" />
+    <style name="Theme.MyTickTacToe" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@color/grey</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorSecondary">@color/grey</item>
+    </style>
 </resources>

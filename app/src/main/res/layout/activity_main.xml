@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellow"
-    tools:context=".MainActivity">
+    android:background="@color/yellow">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_width="256dp"
         android:layout_height="256dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
-        android:src="@drawable/logo_main"
-        app:layout_constraintBottom_toTopOf="@+id/toNewGame"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/logo_main" />
+        app:srcCompat="@drawable/ic_logo_main" />
 
     <TextView
         android:id="@+id/toNewGame"
@@ -30,22 +24,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/title_new_game"
-        app:layout_constraintBottom_toTopOf="@+id/toSettings"
+        app:layout_constraintBottom_toTopOf="@+id/toContinueGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/toComtinueGame"
+        android:id="@+id/toContinueGame"
         style="@style/style_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="64dp"
-        android:text="@string/title_settings"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:text="@string/title_continue_game"
+        app:layout_constraintBottom_toTopOf="@+id/toSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -57,9 +51,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:text="@string/title_continue_game"
-        app:layout_constraintBottom_toTopOf="@+id/toComtinueGame"
+        android:text="@string/title_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
